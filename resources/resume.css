@@ -5,7 +5,7 @@ body {
     background-image: linear-gradient(-90deg, rgba(242, 242, 242, 1) 0%, rgba(242, 242, 242, 1) 50%, rgba(242, 242, 242, 1) 50%, rgba(255, 255, 255) 50%, rgba(255, 255, 255) 100%);
 }
 
-.centralizador {
+.centered {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
@@ -13,16 +13,32 @@ body {
     height: 100vh;
 }
 
-.esquerda {
-    float: left;
+.left, .right {
+    padding: 50px 30px;
 }
 
-.direita {
+.left, .right {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.left {
+    float: left;
+    width: 40%;
+}
+
+.right {
     float: right;
+    width: 60%;
 }
 
 .sidebar {
     background: white;
+}
+
+.main-block {
+    background: #EEE;
 }
 
 .grid {
@@ -45,4 +61,10 @@ li.item:last-child {
 
 h1, h2, h3, h4, h5, h6, p {
     margin: 0px;
+}
+
+@media (max-width: 750px) {
+    .left, .right {
+        width: 100%;
+    }
 }
